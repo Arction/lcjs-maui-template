@@ -6,10 +6,44 @@
     <style>
     </style>
     <script src="https://unpkg.com/@arction/lcjs@3.4.0/dist/lcjs.iife.js"></script>
+    <script src="https://unpkg.com/@arction/xydata@1.4.0/dist/xydata.iife.js"></script>
     <script src="https://unpkg.com/@babel/polyfill@7.7.0/dist/polyfill.min.js"></script>
-    <script src="./xydata.iife.js"></script>
 </head>
 <body>
-    <script src="./index.js"></script>
+    <script>
+        const {
+            lightningChart,
+            SolidFill,
+            SolidLine,
+            AxisScrollStrategies,
+            AxisTickStrategies,
+            ColorRGBA,
+            UIElementBuilders,
+            Themes,
+        } = lcjs
+
+        const { createProgressiveTraceGenerator } = xydata
+
+        const chart = lightningChart().ChartXY()
+            .setTitle(`LCJS x MAUI`)
+
+        const seriesList = [
+            chart.addLineSeries({ dataPattern: { pattern: 'ProgressiveX' } }),
+            chart.addPointLineSeries({ dataPattern: { pattern: 'ProgressiveX' } }),
+            chart.addPointSeries(),
+            chart.addStepSeries(),
+            chart.addSplineSeries(),
+        ]
+
+        seriesList.forEach((series, iSeries) =>
+            createProgressiveTraceGenerator()
+                .setNumberOfPoints(10000)
+                .generate()
+                .setStreamBatchSize(1)
+                .setStreamInterval(200)
+                .toStream()
+                .forEach(point => series.add({ x: point.x, y: point.y + iSeries * 1 }))
+        )
+    </script>
 </body>
 </html>

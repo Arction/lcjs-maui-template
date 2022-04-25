@@ -14,15 +14,20 @@ public partial class MainPage : ContentPage
 		// First display local HTML/JS application
 		string filePath = "index.html";
 #if WINDOWS
-            var stream = await Microsoft.Maui.Storage.FileSystem.OpenAppPackageFileAsync("Assets/" + filePath);
+        var stream = await Microsoft.Maui.Storage.FileSystem.OpenAppPackageFileAsync(filePath);
+		if (stream != null)
+		{
+			string s = (new System.IO.StreamReader(stream)).ReadToEnd();
+			this.webView1.Source = new HtmlWebViewSource { Html = s };
+		}
 #else
 		var stream = await Microsoft.Maui.Storage.FileSystem.OpenAppPackageFileAsync(filePath);
-#endif
 		if (stream != null)
 		{
 			string s = (new System.IO.StreamReader(stream)).ReadToEnd();
 			this.webView1.Source = new HtmlWebViewSource { Html = s, BaseUrl = @"file:///android_asset/" };
 		}
+#endif
 		await Task.Delay(20000);
 
 		// Afterwards scroll through Interactive Examples gallery
