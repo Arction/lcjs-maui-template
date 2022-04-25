@@ -51,3 +51,9 @@ if (stream != null)
     this.webView.Source = new HtmlWebViewSource { Html = s, BaseUrl = @"file:///android_asset/" };
 }
 ```
+
+## Support
+
+If you notice an error in the example code, please open an issue on [GitHub](https://github.com/Arction/lcjs-maui-template/issues). Official [API documentation][3] can be found on [Arction](https://www.arction.com/lightningchart-js-api-documentation) website. If the docs and other materials do not solve your problem as well as implementation help is needed, ask on [StackOverflow](https://stackoverflow.com/questions/tagged/lightningchart) (tagged lightningchart). If you think you found a bug in the LightningChart JavaScript library, please contact support@arction.com. Direct developer email support can be purchased through a [Support Plan](https://www.arction.com/support-services/) or by contacting sales@arction.com.
+
+© Arction Ltd 2009-2022. All rights reserved.
