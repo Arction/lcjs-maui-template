@@ -9,6 +9,7 @@ As MAUI targets desktop and mobile, there are generally 3 relevant types of test
 ## Running the template project
 
 - Open `LcjsMauiTemplate.sln` with [Visual Studio 2022 Preview](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app#get-started-with-visual-studio-2022-172-preview).
+    - Requires "Mobile development with .NET" workload
 
 - Set up a local Android device.
     - https://docs.microsoft.com/en-us/dotnet/maui/android/device/setup
