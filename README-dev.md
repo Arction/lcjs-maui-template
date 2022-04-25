@@ -2,13 +2,13 @@
 
 This repository was built by referencing official MAUI "Getting started" documentation. More specifically, [this page](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app). To use LightningChart JS inside MAUI, **no extra dependencies, configurations, etc. are needed** to this getting started project.
 
-As MAUI is still in preview, it is important to keep in mind that it can change rapidly along with the getting started template. This repository was created on 22th April 2022 with Visual Studio 2022 17.2.0 Preview 4.0 and .NET framework 4.8.04084.
+As MAUI is still in preview, it is important to keep in mind that it can change rapidly along with the getting started template. This repository was created on 22nd April 2022 with Visual Studio 2022 17.2.0 Preview 4.0 and .NET framework 4.8.04084.
 
 As MAUI targets desktop and mobile, there are generally 3 relevant types of testing environments: native desktop, mobile emulator and local mobile devices. LightningChart JS is based on WebGL, which is poorly supported by present day mobile emulators. Due to this, it is safe to say that **developing with mobile emulators is not supported**.
 
 ## Running the template project
 
-- Open `LcjsMauiTemplate.sln` with [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/#download-preview).
+- Open `LcjsMauiTemplate.sln` with [Visual Studio 2022 Preview](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app#get-started-with-visual-studio-2022-172-preview).
 
 - Set up a local Android device.
     - https://docs.microsoft.com/en-us/dotnet/maui/android/device/setup
