@@ -6,6 +6,10 @@ As MAUI is still in preview, it is important to keep in mind that it can change 
 
 As MAUI targets desktop and mobile, there are generally 3 relevant types of testing environments: native desktop, mobile emulator and local mobile devices. LightningChart JS is based on WebGL, which is poorly supported by present day mobile emulators. Due to this, it is safe to say that **developing with mobile emulators is not supported**.
 
+Technically, native desktop (both Windows and iOS) apps should work, but at present state the application is not working correctly in Windows at least. There are no errors, so our understanding is that this is simply due to us not understanding how to use MAUI properly in this use case.
+
+Currently the only tested debug target where the project works in stable manner is a local Android device.
+
 ## Running the template project
 
 - Open `LcjsMauiTemplate.sln` with [Visual Studio 2022 Preview](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app#get-started-with-visual-studio-2022-172-preview).
