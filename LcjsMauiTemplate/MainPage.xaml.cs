@@ -14,9 +14,9 @@ public partial class MainPage : ContentPage
 		// First display local HTML/JS application
 		string filePath = "index.html";
 #if WINDOWS
-            var stream = await Microsoft.Maui.Essentials.FileSystem.OpenAppPackageFileAsync("Assets/" + filePath);
+            var stream = await Microsoft.Maui.Storage.FileSystem.OpenAppPackageFileAsync("Assets/" + filePath);
 #else
-		var stream = await Microsoft.Maui.Essentials.FileSystem.OpenAppPackageFileAsync(filePath);
+		var stream = await Microsoft.Maui.Storage.FileSystem.OpenAppPackageFileAsync(filePath);
 #endif
 		if (stream != null)
 		{
