@@ -16,6 +16,8 @@ As MAUI targets desktop and mobile, there are generally 3 relevant types of test
 
 - Select the local device as target and run.
 
+![Visual Studio Run Target UI](./pictures/run-target.png)
+
 ## How to use LightningChart JS in MAUI
 
 To use LightningChart JS in MAUI, you have to use the MAUI `WebView` component which is capable of loading web applications and web pages. In theory this makes it possible to embed any web application inside MAUI.
